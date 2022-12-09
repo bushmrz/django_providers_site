@@ -1,3 +1,5 @@
+from django.views.generic import ListView
+
 from .models import Profile
 from django.conf import settings
 from django.contrib.auth.models import User
@@ -156,3 +158,8 @@ def ForgetPassword(request):
         print('ошибка в коде :(')
         print(e)
     return render(request, 'temp/forgotPassword.html', {})
+
+
+######################################################################
+
+

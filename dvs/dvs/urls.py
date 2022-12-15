@@ -6,5 +6,6 @@ from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('auth_system.urls'))
+    path('', include('auth_system.urls')),
+    path('', include('all_tables.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

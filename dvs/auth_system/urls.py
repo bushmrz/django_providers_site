@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import HomePage, Register, Login, LogOutUser, ForgetPassword, ChangePassword, Page
+from .views import HomePage, Register, Login, LogOutUser, ForgetPassword, ChangePassword, EditUser
 
 
 urlpatterns = [
@@ -10,6 +10,6 @@ urlpatterns = [
     path('reset/', ForgetPassword, name='forgotPass'),
     path('change-password/<token>/', ChangePassword, name="change_password"),
     path('', Login, name='test'),
-    path('providers-list/', Page, name='user-list'),
+    path('edit-profile/<int:pk>/', EditUser, name = 'editProfile')
     
 ]
